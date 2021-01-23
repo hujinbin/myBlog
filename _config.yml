@@ -4,11 +4,11 @@
 
 # Site
 title: 胡金斌的个人网站
-subtitle: '胡金斌的个人网站'
+subtitle: 记录前端笔记，每天进步一点点
 description: '记录前端笔记，每天进步一点点--------胡金斌的个人网站，胡金斌的个人博客'
-keywords:
-author: John Doe
-language: en
+keywords: 胡金斌，胡金斌的个人网站，胡金斌的个人博客，个人网站，个人博客，前端开发，前端
+author: hujinbin
+language: zh-CN
 timezone: ''
 
 # URL
@@ -98,7 +98,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+## theme: landscape
+theme: amazing
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
