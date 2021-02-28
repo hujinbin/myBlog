@@ -13,7 +13,7 @@ head:
     open_graph:
         # Page title (og:title) (optional)
         # You should leave this blank for most of the time
-        title: 辣椒の酱
+        title: 胡金斌
         # Page type (og:type) (optional)
         # You should leave this blank for most of the time
         type: blog
@@ -25,7 +25,7 @@ head:
         image: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png
         # Site name (og:site_name) (optional)
         # You should leave this blank for most of the time
-        site_name: 辣椒の酱
+        site_name: 胡金斌
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
         author: removeif
@@ -73,17 +73,17 @@ head:
 navbar:
     # Naviagtion menu items
     menu:
-        Home: /
-        Archives: /archives
-        Categories: /categories
-        Tags: /tags
-        About: /about
-        Album: /album
-        Friend: /friend
-        Message: /message
-        Self-talking: /self-talking
-        Music: /music
-        Media: /media
+        首页: /
+        归档: /archives
+        分类: /categories
+        标签: /tags
+        关于: /about
+        相册: /album
+        友链: /friend
+        留言: /message
+        碎碎念: /self-talking
+        音乐: /music
+        影音: /media
     # Links to be shown on the right of the navigation bar
     links:
         Join Gitter:
@@ -246,11 +246,11 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: 辣椒の酱
+        author: 胡金斌
         # Author title
         author_title: 尚未执佩剑，转眼即江湖
         # Author's current location
-        location: 阿尔及利亚
+        location: 浙江杭州
         # URL or path to the avatar image
         avatar: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png
         # Whether show the rounded avatar image
