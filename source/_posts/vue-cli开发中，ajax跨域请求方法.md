@@ -25,8 +25,7 @@ tags: [Vue,javascript]
 ```
 
 
-
-
+<!--more-->
 
 #### vue-resource调用示例
 
