@@ -19,10 +19,10 @@ head:
         type: blog
         # Page URL (og:url) (optional)
         # You should leave this blank for most of the time
-        url: https://removeif.github.io/
+        url: https://github.com/hujinbin
         # Page cover (og:image) (optional)
         # You should leave this blank for most of the time
-        image: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png
+        image: https://cdn.leheavengame.com/jue/images/89090210-71cf-11eb-98c3-375c38d4a5d6.jpeg
         # Site name (og:site_name) (optional)
         # You should leave this blank for most of the time
         site_name: 胡金斌
@@ -86,12 +86,12 @@ navbar:
         影音: /media
     # Links to be shown on the right of the navigation bar
     links:
-        Join Gitter:
-            icon: fab fa-gitter
-            url: 'https://gitter.im/hexo-theme-amazing/community'
+        # Join Gitter:
+        #     icon: fab fa-gitter
+        #     url: 'https://gitter.im/hexo-theme-amazing/community'
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/removeif/hexo-theme-amazing'
+            url: 'https://github.com/hujinbin'
 # Page footer configurations
 footer:
     # Links to be shown on the right of the footer section
@@ -104,7 +104,7 @@ footer:
             url: 'https://creativecommons.org/licenses/by/4.0/'
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/removeif/hexo-theme-amazing'
+            url: 'https://github.com/hujinbin'
 # Article related configurations
 article:
     # Code highlight settings
@@ -248,11 +248,11 @@ widgets:
         # Author name
         author: 胡金斌
         # Author title
-        author_title: 尚未执佩剑，转眼即江湖
+        author_title: web前端开发工程师
         # Author's current location
         location: 浙江杭州
         # URL or path to the avatar image
-        avatar: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png
+        avatar: https://cdn.leheavengame.com/jue/images/89090210-71cf-11eb-98c3-375c38d4a5d6.jpeg
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
