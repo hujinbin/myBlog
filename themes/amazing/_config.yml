@@ -3,7 +3,7 @@ version: 4.0.0
 # Icarus theme variant, can be "default" or "cyberpunk"
 variant: default
 # Path or URL to the website's logo
-logo: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png #/img/logo.svg
+logo: http://cdn.leheavengame.com/jue/images/bcd357f0-a4c2-11eb-ac26-0f6ed95d4e69.png #/img/logo.svg
 # Page metadata configurations
 head:
     # URL or path to the website's icon
@@ -28,7 +28,7 @@ head:
         site_name: 胡金斌
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
-        author: removeif
+        author: hujinbin
         # Page description (og:description) (optional)
         # You should leave this blank for most of the time
         description: 
@@ -77,13 +77,12 @@ navbar:
         归档: /archives
         分类: /categories
         标签: /tags
-        关于: /about
-        相册: /album
-        友链: /friend
-        留言: /message
-        碎碎念: /self-talking
-        音乐: /music
-        影音: /media
+        # 影音: /media
+        # 相册: /album
+        # 友链: /friend
+        # 碎碎念: /self-talking
+        # 留言: /message
+        # 关于: /about
     # Links to be shown on the right of the navigation bar
     links:
         # Join Gitter:
@@ -96,15 +95,15 @@ navbar:
 footer:
     # Links to be shown on the right of the footer section
     links:
-        Creative Commons:
-            icon: fab fa-creative-commons
-            url: 'https://creativecommons.org/'
-        Attribution 4.0 International:
-            icon: fab fa-creative-commons-by
-            url: 'https://creativecommons.org/licenses/by/4.0/'
-        Download on GitHub:
-            icon: fab fa-github
-            url: 'https://github.com/hujinbin'
+        # Creative Commons:
+        #     icon: fab fa-creative-commons
+        #     url: 'https://creativecommons.org/'
+        # Attribution 4.0 International:
+        #     icon: fab fa-creative-commons-by
+        #     url: 'https://creativecommons.org/licenses/by/4.0/'
+        # Download on GitHub:
+        #     icon: fab fa-github
+        #     url: 'https://github.com/hujinbin'
 # Article related configurations
 article:
     # Code highlight settings
@@ -144,15 +143,15 @@ search:
 comment:
     type: gitalk
     language: zh-CN #zh-CN #Localization language key, en, zh-CN and zh-TW are currently available.
-    owner: removeif         # (required) GitHub user name
-    repo: blog_comment          # (required) GitHub repository name
-    client_id: 46a9f3481b46ea0129d8     # (required) OAuth application client id
-    client_secret: 79c7c9cb847e141757d7864453bcbf89f0655b24 # (required) OAuth application client secret
-    admin: ['removeif']
+    owner: hujinbin         # (required) GitHub user name
+    repo: myBlog          # (required) GitHub repository name
+    client_id: 805d0c127d7edb5532bb     # (required) OAuth application client id
+    client_secret: 67d9786dfa8834d818516bcdb017bc2fff853443 # (required) OAuth application client secret
+    admin: ['hujinbin']
     create_issue_manually: true
     distraction_free_mode: false
-    has_hot_recommend: true # 是否有热门推荐
-    has_latest_comment: true #是否有最新评论
+    has_hot_recommend: false # 是否有热门推荐
+    has_latest_comment: false #是否有最新评论
     
 # comment:
 #     type: valine
@@ -185,12 +184,12 @@ donates:
         # Donation entry name
         type: alipay
         # Qrcode image URL
-        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135456.png'
+        qrcode: 'https://img.alicdn.com/imgextra/i4/2509590220/TB2GxhZfjnD8KJjSspbXXbbEXXa_!!2509590220.jpg'
     -
         # Donation entry name
         type: wechat
         # Qrcode image URL
-        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135550.png'
+        qrcode: 'https://img.alicdn.com/imgextra/i1/2509590220/TB2K0hPfdnJ8KJjSszdXXaxuFXa_!!2509590220.png'
     # "Buy me a coffee" donate button configurations
 #    -
 #        type: buymeacoffee
@@ -258,21 +257,21 @@ widgets:
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: 'https://github.com/ppoffice'
+        follow_link: 'https://github.com/hujinbin'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/removeif'
-            Weibo:
-                icon: fab fa-weibo
-                url: 'https://weibo.com/removeif'
+                url: 'https://github.com/hujinbin'
+            # Weibo:
+            #     icon: fab fa-weibo
+            #     url: 'https://weibo.com/removeif'
             Email:
                 icon: fa fa-envelope
-                url: 'mailto:removeif@163.com'
-            Next:
-                icon: fab fa-dribbble
-                url: 'https://removeif.github.io/remove.io'
+                url: 'mailto:437044048@qq.com'
+            # Next:
+            #     icon: fab fa-dribbble
+            #     url: 'https://hjb.leheavengame.com'
             RSS:
                 icon: fas fa-rss
                 url: /atom.xml
@@ -284,8 +283,13 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
-            Hexo: 'https://hexo.io'
-            Bulma: 'https://bulma.io'
+            淘宝店: 'https://shop266766986.taobao.com/?spm=a230r.7195193.1997079397.44.nqV10Q'
+            惠shop好货: 'https://cash.leheavengame.com/'
+            惊觉: 'https://jue.leheavengame.com/'
+            乾学网: 'https://bbs.leheavengame.com/'
+            乐天堂游戏: 'https://g.leheavengame.com/'
+            惠shop: 'https://coupon.leheavengame.com/'
+            携程旅行网: 'https://www.ctrip.com/?AllianceID=1047290&sid=1751273&ouid=&app=0101F00'
     # Latest comment widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -396,8 +400,8 @@ providers:
 
 
 footer_copyright_dsec: © 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /> #footer 版权说明 可自由配置
-website_start_time: 2018/11/11 00:00:00 #网站运行开始时间,不填不显示
-footer_registered_no: 川ICP备88888888号-8（测试） #备案号
+website_start_time: 2017/05/25 00:00:00 #网站运行开始时间,不填不显示
+footer_registered_no: 浙ICP备17021862号-1 #备案号
 side_music_netease_id: 2364053447 #侧边栏网易云歌单id
 busuanzi_only_count: false #当上面plugins中busuanzi: true时，此配置busuanzi_only_count为true时，网站不显示不蒜子统计数据，但是会每次统计。false时显示统计数据。
 has_live_2D_switch: true #live2D开关 true-开 false-关

@@ -64,7 +64,7 @@ class Footer extends Component {
                             &nbsp;&nbsp;Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
                                 href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> & <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a>&nbsp;
                             <br />
-                            {registeredNo ? <span>&copy; <a href="http://www.beian.miit.gov.cn/" target="_blank">{registeredNo}</a><br /></span> : null}
+                            {registeredNo ? <span>&copy; <a href="https://beian.miit.gov.cn/" target="_blank">{registeredNo}</a><br /></span> : null}
                             {footerCopyrightDsec ? <span dangerouslySetInnerHTML={{ __html: footerCopyrightDsec }}></span> : null}
                             {websiteStartTime ? <span>
                                 <span id="statistic-times">loading...</span>
