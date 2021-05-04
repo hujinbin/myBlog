@@ -75,14 +75,14 @@ navbar:
     menu:
         首页: /
         归档: /archives
-        分类: /categories
+        # 分类: /categories
         标签: /tags
-        # 影音: /media
-        # 相册: /album
-        # 友链: /friend
-        # 碎碎念: /self-talking
-        # 留言: /message
-        # 关于: /about
+        影音: /media
+        相册: /album
+        友链: /friend
+        碎碎念: /self-talking
+        留言: /message
+        关于: /about
     # Links to be shown on the right of the navigation bar
     links:
         # Join Gitter:

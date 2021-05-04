@@ -12,7 +12,7 @@ class Categories extends Component {
                     <span class="level-item">{category.name}</span>
                 </span>
                 {showCount ? <span class="level-end">
-                    {/* <span class="level-item tag">{category.count}</span> */}
+                    <span class="level-item tag">{category.count}</span>
                 </span> : null}
             </a>
             {category.children.length ? <ul class="mr-0">{this.renderList(category.children, showCount,count,isPage)}</ul> : null}
