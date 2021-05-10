@@ -51,7 +51,24 @@ class Footer extends Component {
             1 == String(snum).length && (snum = "0" + snum),
                 document.getElementById("statistic-times").innerHTML = "${timeArr[0]}"+time.split(" ")[0].replace(/\\//g,".")+"${timeArr[1]}" + dnum + "${timeArr[2]}" + hnum + "${timeArr[3]}" + mnum + "${timeArr[4]}" + snum + "${timeArr[5]}";
         }var now = new Date();setInterval("createTime('${websiteStartTime}')", 250,"");`;
-
+  
+        // 百度站长自动推送
+        var baiduPushJs=`
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        `
+        // 广告联盟 
+        var RichJs =`
+       (function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4225913,document.body||document.documentElement)
+    `
         return <footer class="footer">
             <div class="container">
                 <div class="level">
@@ -108,6 +125,8 @@ class Footer extends Component {
                     </div>
                 </div>
             </div>
+            <script dangerouslySetInnerHTML={{ __html: baiduPushJs }}></script>
+            <script dangerouslySetInnerHTML={{ __html: RichJs }}></script>
         </footer>;
     }
 }

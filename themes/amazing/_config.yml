@@ -350,9 +350,9 @@ plugins:
     back_to_top: true
     # Baidu Analytics plugin settings
     # https://tongji.baidu.com
-    baidu_analytics:
+    baidu_analytics: 
         # Baidu Analytics tracking ID
-        tracking_id: 
+        tracking_id: 5676cd260145578c2f389fb76f4c82be
     # BuSuanZi site/page view counter
     # https://busuanzi.ibruce.info
     busuanzi: true
