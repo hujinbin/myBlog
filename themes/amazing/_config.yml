@@ -147,9 +147,10 @@ comment:
     language: zh-CN #zh-CN #Localization language key, en, zh-CN and zh-TW are currently available.
     owner: hujinbin         # (required) GitHub user name
     repo: myBlog          # (required) GitHub repository name
-    client_id: 80d9615d7f9ac170422a     # github免费空间 (required) OAuth application client id
     # client_id: 805d0c127d7edb5532bb     # 我的网站 (required) OAuth application client id
-    client_secret: 67d9786dfa8834d818516bcdb017bc2fff853443 # (required) OAuth application client secret
+    # client_secret: 67d9786dfa8834d818516bcdb017bc2fff853443 # (required) OAuth application client secret
+    client_id: 80d9615d7f9ac170422a     # github免费空间 (required) OAuth application client id 
+    client_secret: 96a3ef8319106445349a5c16e716dcf5caa0e887 # (required) OAuth application client secret
     admin: ['hujinbin']
     create_issue_manually: true
     distraction_free_mode: false
