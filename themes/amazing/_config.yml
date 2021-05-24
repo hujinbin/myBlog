@@ -140,12 +140,15 @@ search:
 #    shortname: ''
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
+
+# 对接github评论
 comment:
     type: gitalk
     language: zh-CN #zh-CN #Localization language key, en, zh-CN and zh-TW are currently available.
     owner: hujinbin         # (required) GitHub user name
     repo: myBlog          # (required) GitHub repository name
-    client_id: 805d0c127d7edb5532bb     # (required) OAuth application client id
+    client_id: 80d9615d7f9ac170422a     # github免费空间 (required) OAuth application client id
+    # client_id: 805d0c127d7edb5532bb     # 我的网站 (required) OAuth application client id
     client_secret: 67d9786dfa8834d818516bcdb017bc2fff853443 # (required) OAuth application client secret
     admin: ['hujinbin']
     create_issue_manually: true
@@ -350,6 +353,7 @@ plugins:
     back_to_top: true
     # Baidu Analytics plugin settings
     # https://tongji.baidu.com
+    # 百度统计
     baidu_analytics: 
         # Baidu Analytics tracking ID
         tracking_id: 5676cd260145578c2f389fb76f4c82be
