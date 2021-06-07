@@ -333,11 +333,11 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: adsense
-
+# 谷歌联盟
 # AdSense client ID
-adsense_client_id: #'ca-pub-6343805421927634'
+adsense_client_id: 'ca-pub-7979174285252748'
 # AdSense AD unit ID
-adsense_slot_id: '5134765588'
+adsense_slot_id: '5638602543'
 # article head ad
 article_head_has_ad: true
 # comment head ad
