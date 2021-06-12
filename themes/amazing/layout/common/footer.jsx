@@ -66,9 +66,9 @@ class Footer extends Component {
             s.parentNode.insertBefore(bp, s);
         `
         // 广告联盟 
-        var RichJs =`
-       (function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4225913,document.body||document.documentElement)
-    `
+    //     var RichJs =`
+    //    (function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4225913,document.body||document.documentElement)
+    // `
         return <footer class="footer">
             <div class="container">
                 <div class="level">
@@ -126,7 +126,7 @@ class Footer extends Component {
                 </div>
             </div>
             <script dangerouslySetInnerHTML={{ __html: baiduPushJs }}></script>
-            <script dangerouslySetInnerHTML={{ __html: RichJs }}></script>
+            {/* <script dangerouslySetInnerHTML={{ __html: RichJs }}></script> */}
         </footer>;
     }
 }
