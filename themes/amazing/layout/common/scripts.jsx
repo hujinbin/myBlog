@@ -29,8 +29,10 @@ module.exports = class extends Component {
             userName = comment.owner;
             isValine = true;
         }
-
-        const js = `$.getScript('${my_cdn(url_for('/js/comment-issue-data.js'))}',function(){loadIssueData('${appId}','${appKey}','${userName}','${userRepo}',${isValine});})`;
+        let js =''
+        try{
+            js = `$.getScript('${my_cdn(url_for('/js/comment-issue-data.js'))}',function(){loadIssueData('${appId}','${appKey}','${userName}','${userRepo}',${isValine});})`;
+        }catch(e){}
         let externalLink;
         if (typeof external_link === 'boolean') {
             externalLink = { enable: external_link, exclude: [] };

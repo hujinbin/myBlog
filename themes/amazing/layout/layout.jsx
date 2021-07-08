@@ -78,8 +78,10 @@ module.exports = class extends Component {
         document.addEventListener('pjax:complete', function () {
             $(".section").css({opacity:1});
             if(${hasComment}){
-                $.getScript('${my_cdn(url_for('/js/comment-issue-data.js'))}',function(){loadIssueData('${appId}','${appKey}','${userName}','${userRepo}',${isValine});});
-            }
+                try{
+                    $.getScript('${my_cdn(url_for('/js/comment-issue-data.js'))}',function(){loadIssueData('${appId}','${appKey}','${userName}','${userRepo}',${isValine});});
+                }catch(e){}
+             }
             if(${isMath}){
                 loadMathJax();
             }
