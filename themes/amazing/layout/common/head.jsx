@@ -159,6 +159,7 @@ module.exports = class extends Component {
             {favicon ? <link rel="icon" href={url_for(favicon)} /> : null}
             {/*fix chrome busuanzi issue*/}
             <meta name="referrer" content="no-referrer-when-downgrade" />
+            {/* <meta name="referrer" content="no-referrer" /> */}
             <link rel="stylesheet" href={iconcdn()} />
             {hlTheme ? <link rel="stylesheet" href={cdn('highlight.js', '9.12.0', 'styles/' + hlTheme + '.css')} /> : null}
             <link rel="stylesheet" href={fontCssUrl[variant]} />
