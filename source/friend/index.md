@@ -14,7 +14,7 @@ date: 2019-09-09 18:52:09
     网站图标：https://cdn.leheavengame.com/jue/images/89090210-71cf-11eb-98c3-375c38d4a5d6.jpeg
     网站名称：胡金斌的博客
     网站地址：https://hjb.leheavengame.com/
-    网站简介：前端开发
+    网站简介：前端开发，技术交流
 
 
 <!-- <script type="text/javascript" defer src="/js/friend.js"></script>
