@@ -12,10 +12,10 @@ date: 2019-09-09 18:52:09
 - 本站不存储友链图片，如果友链图片换了无法更新。图片裂了的会替换成默认图，需要更换的请留言告知。
 - 本站友链信息如下，申请友链前请先添加本站信息：
     网站图标：https://cdn.leheavengame.com/jue/images/89090210-71cf-11eb-98c3-375c38d4a5d6.jpeg
-    网站名称：胡金斌的博客
+    网站名称：胡金斌的个人网站
     网站地址：https://hjb.leheavengame.com/
     网站简介：前端开发，技术交流
 
 
-<!-- <script type="text/javascript" defer src="/js/friend.js"></script>
-<div class="links-content">加载中，稍等几秒...</div> -->
+<script type="text/javascript" defer src="/js/friend.js"></script>
+<div class="links-content">加载中，稍等几秒...</div>
