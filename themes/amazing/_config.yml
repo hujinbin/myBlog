@@ -288,13 +288,10 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
-            淘宝店: 'https://shop266766986.taobao.com/?spm=a230r.7195193.1997079397.44.nqV10Q'
             惠shop好货: 'https://cash.leheavengame.com/'
             惊觉: 'https://jue.leheavengame.com/'
             乾学网: 'https://bbs.leheavengame.com/'
-            乐天堂游戏: 'https://g.leheavengame.com/'
             惠shop: 'https://coupon.leheavengame.com/'
-            携程旅行网: 'https://www.ctrip.com/?AllianceID=1047290&sid=1751273&ouid=&app=0101F00'
     # Latest comment widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
