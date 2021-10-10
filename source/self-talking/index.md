@@ -14,7 +14,7 @@ tips：github登录后按时间正序查看<span id="busuanzi_container_page_pv"
             clientID: '80d9615d7f9ac170422a',
             clientSecret: '96a3ef8319106445349a5c16e716dcf5caa0e887',
             id: '666666',
-            repo: 'issue_database',
+            repo: 'myBlog',
             owner: 'hujinbin',
             admin: "hujinbin",
             createIssueManually: true,
