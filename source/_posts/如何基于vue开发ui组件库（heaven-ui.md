@@ -438,7 +438,12 @@ npm publish --access public
 包名，然后在你的demo项⽬的⼊⼝⽂件⾥
 
 ```
-import Vue from vueimport Heaven from 'heaven-ui'import 'heaven-ui/dist/heaven-ui.min.css'// 其他代码 ...Vue.use(Heaven)
+import Vue from vue
+import Heaven from 'heaven-ui'
+import 'heaven-ui/dist/heaven-ui.min.css'// 
+其他代码 ...
+
+Vue.use(Heaven)
 ```
 
 这样设置好之后，我们创建的组件就可以在这个项⽬⾥使⽤了
