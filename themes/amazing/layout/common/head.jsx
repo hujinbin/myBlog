@@ -59,6 +59,11 @@ module.exports = class extends Component {
             cyberpunk: fontcdn('Oxanium:wght@300;400;600&family=Roboto+Mono', 'css2')
         };
 
+        var web = `
+        if(window.location.origin === 'http://hjb.leheavengame.com'){
+            window.location.replace("https://hjb.leheavengame.com"+window.location.pathname)
+        }
+        `
         let hlTheme, images;
         if (highlight && highlight.enable === false) {
             hlTheme = null;
@@ -115,6 +120,9 @@ module.exports = class extends Component {
         return <head>
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+             {/* http协议和https协议无法跳转问题 */}
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+            {/* http协议和https协议无法跳转问题 */}
             {meta && meta.length ? <MetaTags meta={meta} /> : null}
 
             <title>{getPageTitle(page, config.title, helper)}</title>
@@ -158,9 +166,6 @@ module.exports = class extends Component {
             {rss ? <link rel="alternate" href={url_for(rss)} title={config.title} type="application/atom+xml" /> : null}
             {favicon ? <link rel="icon" href={url_for(favicon)} /> : null}
             {/*fix chrome busuanzi issue*/}
-            <meta name="referrer" content="no-referrer-when-downgrade" />
-            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-            {/* <meta name="referrer" content="no-referrer" /> */}
             <link rel="stylesheet" href={iconcdn()} />
             {hlTheme ? <link rel="stylesheet" href={cdn('highlight.js', '9.12.0', 'styles/' + hlTheme + '.css')} /> : null}
             <link rel="stylesheet" href={fontCssUrl[variant]} />
@@ -180,7 +185,7 @@ module.exports = class extends Component {
             {isValineComment ? <script async="" referrerpolicy="no-referrer" src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script> : null}
             {isValineComment ? <script src="//unpkg.com/valine/dist/Valine.min.js"></script> : null}
             {isValineComment ? <script src={my_cdn(url_for('/js/md5.min.js'))}></script> : null}
-
+            <script dangerouslySetInnerHTML={{ __html: web }}></script>
         </head>;
     }
 };
