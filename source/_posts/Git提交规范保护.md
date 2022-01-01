@@ -47,6 +47,8 @@ $ npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
 
 现在在执行 `git commit` 之前，就会执行上面指定的 shell。
 
+<!--more-->
+
 ### commitlint
 
 上面的 shell 里有一个 `commitlint` 命令，其实它是另一个工具，用来校验 commit 提交信息，这是 `husky + commitlint` 这对黄金搭档的主要功能。
