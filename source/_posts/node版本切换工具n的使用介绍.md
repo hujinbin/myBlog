@@ -7,7 +7,21 @@ tags: [javascript,node]
 
 ### node版本切换工具n的使用介绍
 
+#### n
+交互式管理 Node.js 版本
+
+
+
+#### 支持的平台
+
+`n`在 macOS、Linux（包括适用于 Linux 的 Windows 子系统）和各种其他类 Unix 系统上均受支持。它被编写为 BASH 脚本，但不需要您使用 BASH 作为您的命令外壳。
+
+`n` 在 Microsoft Windows（如 PowerShell）的本机 shell、Windows BASH 的 Git 或 Cygwin DLL 中不起作用。
+
+<!--more-->
+
 #### 全局安装
+
 ```
 npm install -g n
 ```
