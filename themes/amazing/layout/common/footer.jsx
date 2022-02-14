@@ -64,18 +64,7 @@ class Footer extends Component {
             }
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(bp, s);
-        `
-        // 360站长自动推送
-        var PushJs=`
-        (function(){
-            var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
-            document.write('<script src="' + src + '" id="sozz"><\/script>');
-            })();
-        `
-        // 广告联盟 
-    //     var RichJs =`
-    //    (function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4225913,document.body||document.documentElement)
-    // `
+        `;
         return <footer class="footer">
             <div class="container">
                 <div class="level">
@@ -134,7 +123,6 @@ class Footer extends Component {
                 </div>
             </div>
             <script dangerouslySetInnerHTML={{ __html: baiduPushJs }}></script>
-            <script dangerouslySetInnerHTML={{ __html: PushJs }}></script>
             {/* <script dangerouslySetInnerHTML={{ __html: RichJs }}></script> */}
         </footer>;
     }
