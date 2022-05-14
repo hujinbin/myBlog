@@ -11,6 +11,7 @@ comments: false
 手机号: 171-**-2662
 Email: 437044048@qq.com
 WeChat: hjb94110
+QQ交流群：749076211
 
 ##### 个人信息
 胡金斌/男/1994
@@ -18,7 +19,12 @@ WeChat: hjb94110
 地点: 杭州
 2015年6月份开始从事前端工作。
 
+
 前端爱好者
+
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=hujinbin&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
+
 
 <br>
 
