@@ -55,7 +55,7 @@ new Foo.getName();   // -> 1
 new Foo().getName(); // -> 2
 
 ```
-![img](https://cdn.leheavengame.com/jue/images/2706b040-6ad9-11ec-8ee3-f3ac29f825e3.jpg)
+![img](http://cdn.leheavengame.com/jue/images/2706b040-6ad9-11ec-8ee3-f3ac29f825e3.jpg)
 
 从上图可以看出，new Foo() 的优先级大于 new Foo ，所以对于上述代码来说可以这样划分执行顺序
 

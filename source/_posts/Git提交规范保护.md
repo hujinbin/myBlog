@@ -80,7 +80,7 @@ $ git commit -m 'test'
 
 因为 “test” 不符合 commit 规范，所以被阻止了，执行结果如下：
 
-![WX20210922](https://cdn.leheavengame.com/jue/images/17d3fee0-4d04-11ec-bd84-7b06f37942db.jpg)
+![WX20210922](http://cdn.leheavengame.com/jue/images/17d3fee0-4d04-11ec-bd84-7b06f37942db.jpg)
 
 我们再试一下符合规范的提交格式：
 

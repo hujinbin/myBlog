@@ -31,7 +31,7 @@ vite包含如下特点：
 
 
 
-![img](https://cdn.leheavengame.com/jue/images/ab8d7aa0-8294-11ed-8661-396367bbd919.jpg)
+![img](http://cdn.leheavengame.com/jue/images/ab8d7aa0-8294-11ed-8661-396367bbd919.jpg)
 
 
 
@@ -103,7 +103,7 @@ export default () => defineConfig({
 
 
 
-![img](https://cdn.leheavengame.com/jue/images/00fb4a80-8295-11ed-8661-396367bbd919.jpg)
+![img](http://cdn.leheavengame.com/jue/images/00fb4a80-8295-11ed-8661-396367bbd919.jpg)
 
 
 
@@ -117,7 +117,7 @@ export default () => defineConfig({
 
 
 
-![img](https://cdn.leheavengame.com/jue/images/0e3d4db0-8295-11ed-8661-396367bbd919.jpg)
+![img](http://cdn.leheavengame.com/jue/images/0e3d4db0-8295-11ed-8661-396367bbd919.jpg)
 
 
 ```
