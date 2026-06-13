@@ -149,8 +149,8 @@ comment:
     repo: myBlog          # (required) GitHub repository name
     # client_id: 805d0c127d7edb5532bb     # 我的网站 (required) OAuth application client id
     # client_secret: 67d9786dfa8834d818516bcdb017bc2fff853443 # (required) OAuth application client secret
-    client_id: 80d9615d7f9ac170422a     # github免费空间 (required) OAuth application client id 
-    client_secret: 96a3ef8319106445349a5c16e716dcf5caa0e887 # (required) OAuth application client secret
+    client_id: 805d0c127d7edb5532bb     # github免费空间 (required) OAuth application client id 
+    client_secret: 89de913bcdc87f3e47e916e5516f21ae8f0a69dd # (required) OAuth application client secret
     admin: ['hujinbin']
     labels: ['blog_commit', 'blog_self-talking','blog_media','blog_album','blog_friend','blog_message']
     create_issue_manually: false
