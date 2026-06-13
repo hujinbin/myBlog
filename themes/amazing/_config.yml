@@ -153,7 +153,7 @@ comment:
     client_secret: 96a3ef8319106445349a5c16e716dcf5caa0e887 # (required) OAuth application client secret
     admin: ['hujinbin']
     labels: ['blog_commit', 'blog_self-talking','blog_media','blog_album','blog_friend','blog_message']
-    create_issue_manually: true
+    create_issue_manually: false
     distraction_free_mode: false
     has_hot_recommend: false # 是否有热门推荐
     has_latest_comment: false #是否有最新评论

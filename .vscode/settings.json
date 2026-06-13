@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^npx hexo clean; npx hexo generate; npx hexo server$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
