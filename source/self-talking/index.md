@@ -11,12 +11,14 @@ tips：github登录后按时间正序查看<span id="busuanzi_container_page_pv"
 <script>
     $.getScript("/js/gitalk_self.min.js", function () {
         var gitalk = new Gitalk({
-            clientID: '80d9615d7f9ac170422a',
-            clientSecret: '96a3ef8319106445349a5c16e716dcf5caa0e887',
+            clientID: '805d0c127d7edb5532bb',
+            clientSecret: '89de913bcdc87f3e47e916e5516f21ae8f0a69dd',
             id: '666666',
+            url: window.location.origin + window.location.pathname + window.location.hash,
             repo: 'myBlog',
             owner: 'hujinbin',
-            admin: "hujinbin",
+            admin: ["hujinbin"],
+            proxy: 'https://www.leheavengame.com/api/github/oauth/access_token',
             createIssueManually: true,
             distractionFreeMode: false
         });

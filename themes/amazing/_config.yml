@@ -152,7 +152,8 @@ comment:
     client_id: 805d0c127d7edb5532bb     # github免费空间 (required) OAuth application client id 
     client_secret: 89de913bcdc87f3e47e916e5516f21ae8f0a69dd # (required) OAuth application client secret
     admin: ['hujinbin']
-    labels: ['blog_commit', 'blog_self-talking','blog_media','blog_album','blog_friend','blog_message']
+    labels: ['Gitalk']
+    proxy: https://www.leheavengame.com/api/github/oauth/access_token
     create_issue_manually: false
     distraction_free_mode: false
     has_hot_recommend: false # 是否有热门推荐

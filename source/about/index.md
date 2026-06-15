@@ -1,7 +1,7 @@
 ---
 thumbnail: https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2020/20201030172650.png
 date: 2017-03-21 08:24:49
-comments: false
+comments: true
 ---
 
 #### 个人简介

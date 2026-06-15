@@ -17,6 +17,7 @@ class Gitalk extends Component {
             pagerDirection = 'last',
             perPage = 10,
             proxy,
+            labels,
             flipMoveOptions,
             enableHotKey,
             jsUrl,
@@ -31,10 +32,12 @@ class Gitalk extends Component {
                 Please set it in <code>_config.yml</code>.
             </div>;
         }
-        const js = ` $.getScript('${jsUrl}', function () { 
+        const js = ` $.getScript('${jsUrl}', function () {
+            var cleanUrl = window.location.origin + window.location.pathname + window.location.hash;
             var gitalk = new Gitalk({
             language:'${language}',
             id: '${id}',
+            url: cleanUrl,
             repo: '${repo}',
             owner: '${owner}',
             clientID: '${clientId}',
@@ -44,6 +47,7 @@ class Gitalk extends Component {
             distractionFreeMode: ${distractionFreeMode},
             perPage: ${perPage},
             pagerDirection: '${pagerDirection}',
+            labels: ${JSON.stringify(labels)},
             ${proxy ? `proxy: '${proxy}',` : ''}
             ${flipMoveOptions ? `flipMoveOptions: ${JSON.stringify(flipMoveOptions)},` : ''}
             enableHotKey: ${enableHotKey ? !!enableHotKey : true},
@@ -80,6 +84,7 @@ module.exports = Gitalk.Cacheable = cacheComponent(Gitalk, 'comment.gitalk', pro
         pagerDirection: comment.pager_direction,
         perPage: comment.per_page,
         proxy: comment.proxy,
+        labels: comment.labels || ['Gitalk'],
         flipMoveOptions: comment.flip_move_options,
         enableHotKey: comment.enable_hotkey,
         cssUrl: helper.cdn('gitalk', '1.6.0', 'dist/gitalk.css'),

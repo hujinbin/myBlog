@@ -1,5 +1,5 @@
 const logger = require('hexo-log')();
-const {Component} = require('inferno');
+const {Component, Fragment} = require('inferno');
 const view = require('hexo-component-inferno/lib/core/view');
 
 module.exports = class extends Component {
@@ -11,7 +11,6 @@ module.exports = class extends Component {
         if (!comment || typeof comment.type !== 'string') {
             return null;
         }
-        const isGitalk = comment.type == 'gitalk';
         const commentColsed = !page.comments;
 
         return <div class="card">
@@ -19,7 +18,7 @@ module.exports = class extends Component {
                 {!commentColsed ? <div class="title is-5">{__('article.comments')}</div> : null}
                 {(() => {
                     try {
-                        if (isGitalk || !commentColsed) {
+                        if (!commentColsed) {
                             let Comment = view.require('comment/' + comment.type);
                             Comment = Comment.Cacheable ? Comment.Cacheable : Comment;
                             return <Comment config={config} page={page} helper={helper} comment={comment}/>;
