@@ -137,7 +137,7 @@ module.exports = class extends Component {
                 <Footer config={config} helper={helper} />
                 <Scripts site={site} config={config} helper={helper} page={page} />
                 <Search config={config} helper={helper} />
-                {use_pjax ? <script src="/script/pjax.js"></script> : null}
+                {use_pjax ? <script src={url_for('/js/pjax.js')}></script> : null}
                 {use_pjax ? <script type="text/javascript" dangerouslySetInnerHTML={{ __html: pjaxJs }}></script> : null}
             </body>
         </html>;

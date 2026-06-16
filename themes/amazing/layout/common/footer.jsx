@@ -101,9 +101,9 @@ class Footer extends Component {
                         </div> : null}
                         {side_music_netease_id ?
                             <div class="sideMusic">
-                                <link rel="stylesheet" href="/script/APlayer.min.css" />
+                                <link rel="stylesheet" href={url_for('/css/APlayer.min.css')} />
                                 <script src={my_cdn(url_for('/js/APlayer.min.js'))}></script>
-                                <script src="/script/Meting.min.js"></script>
+                                <script src={my_cdn(url_for('/js/Meting.min.js'))}></script>
                                 <meting-js style="width: auto;height: 2000px;"
                                     server="netease"
                                     type="playlist"
