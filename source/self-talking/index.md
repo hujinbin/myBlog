@@ -14,6 +14,7 @@ tips：github登录后按时间正序查看<span id="busuanzi_container_page_pv"
             clientID: '805d0c127d7edb5532bb',
             clientSecret: '89de913bcdc87f3e47e916e5516f21ae8f0a69dd',
             id: '666666',
+            title: 'blog_self-talking',
             url: window.location.origin + window.location.pathname + window.location.hash,
             repo: 'myBlog',
             owner: 'hujinbin',

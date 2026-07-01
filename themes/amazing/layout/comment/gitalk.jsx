@@ -12,6 +12,7 @@ class Gitalk extends Component {
             admin,
             clientId,
             clientSecret,
+            title,
             createIssueManually = false,
             distractionFreeMode = false,
             pagerDirection = 'last',
@@ -37,6 +38,7 @@ class Gitalk extends Component {
             var gitalk = new Gitalk({
             language:'${language}',
             id: '${id}',
+            title: ${JSON.stringify(title)},
             url: cleanUrl,
             repo: '${repo}',
             owner: '${owner}',
@@ -68,6 +70,10 @@ module.exports = Gitalk.Cacheable = cacheComponent(Gitalk, 'comment.gitalk', pro
 
     // FIXME: config name change
     const id = _get_md5(_get_path_end_str(props.page.path, props.page.uniqueId, props.page.title));
+    const fallbackTitle = (props.page.path || props.page.uniqueId || id)
+        .replace(/\/?index\.html$/, '')
+        .replace(/\/$/, '');
+    const title = props.page.title || (fallbackTitle ? `blog_${fallbackTitle}` : id);
 
     let canComments = props.page.comments;
 
@@ -79,6 +85,7 @@ module.exports = Gitalk.Cacheable = cacheComponent(Gitalk, 'comment.gitalk', pro
         admin: comment.admin,
         clientId: comment.client_id,
         clientSecret: comment.client_secret,
+        title,
         createIssueManually: comment.create_issue_manually,
         distractionFreeMode: comment.distraction_free_mode,
         pagerDirection: comment.pager_direction,
