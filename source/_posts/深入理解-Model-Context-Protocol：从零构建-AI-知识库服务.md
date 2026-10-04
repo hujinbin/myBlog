@@ -21,6 +21,10 @@ Model Context Protocol（模型上下文协议）是由 Anthropic 推出的开�
 
     AI 应用 ←→ MCP 协议 ←→ MCP Server ←→ 数据源
 
+
+
+<!--more-->  
+
 **核心优势：**
 
 1.  **标准化通信**：统一的协议规范，无需为每个 AI 应用单独开发接口

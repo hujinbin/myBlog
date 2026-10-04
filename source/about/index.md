@@ -36,7 +36,7 @@ QQ交流群：749076211
 + 在Icarus主题之上进行了部分修改。
 
 
-#### 本站推荐索引
+<!-- #### 本站推荐索引
 
 ---
 **博客主题相关**
@@ -46,5 +46,5 @@ QQ交流群：749076211
 + [博客换肤的一种实现方式思路](https://removeif.github.io/theme/博客换肤的一种实现方式思路.html)
 + [博客中gitalk最新评论的获取](https://removeif.github.io/theme/博客中gitalk最新评论的获取.html)
 + [博客图片上传picgo工具github图传使用](https://removeif.github.io/theme/博客图片上传picgo工具github图传使用.html)
-+ [安装、部分配置icarus主题中文版](https://removeif.github.io/theme/安装、部分配置icarus主题中文版.html)
++ [安装、部分配置icarus主题中文版](https://removeif.github.io/theme/安装、部分配置icarus主题中文版.html) -->
 
