@@ -294,6 +294,10 @@ widgets:
             乾学网: 'https://bbs.leheavengame.com/'
             乾坤宝录: 'https://guide.leheavengame.com/'
             惠shop: 'https://coupon.leheavengame.com/'
+    # 侧栏广告放在最新文章前，避免沉到整个侧栏底部
+    -
+        position: right
+        type: adsense
     # Latest comment widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -328,16 +332,13 @@ widgets:
         description: 
         # Feedburner ID
         feedburner_id: ''
-    # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: adsense
 # 谷歌联盟
 # AdSense client ID
 adsense_client_id: 'ca-pub-7979174285252748'
 # AdSense AD unit ID
 adsense_slot_id: '5638602543'
+# 沿用本站 publisher 已有的响应式展示单元；原文章内单元保留供兼容配置使用
+adsense_display_slot_id: '2903739942'
 # article head ad
 article_head_has_ad: true
 # comment head ad

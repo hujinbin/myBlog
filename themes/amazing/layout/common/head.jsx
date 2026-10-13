@@ -120,6 +120,16 @@ module.exports = class extends Component {
         return <head>
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+            {adsenseClientId ? <script id="blog-adsense-loader" data-cfasync="false" async
+                src={'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + encodeURIComponent(adsenseClientId)}
+                crossorigin="anonymous" /> : null}
+            {adsenseClientId ? <script data-cfasync="false" dangerouslySetInnerHTML={{ __html: `
+                document.getElementById('blog-adsense-loader').addEventListener('error', function () {
+                    window.__blogAdsenseLoaderFailed = true;
+                    document.dispatchEvent(new Event('adsense:loader-error'));
+                });
+            ` }} /> : null}
+            {adsenseClientId ? <script data-cfasync="false" defer src={url_for('/js/adsense.js?v=1')} /> : null}
              {/* http协议和https协议无法跳转问题 */}
             <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
             {/* http协议和https协议无法跳转问题 */}
@@ -178,8 +188,6 @@ module.exports = class extends Component {
             <script src={my_cdn(url_for('/js/globalUtils.js'))}></script>
             <Plugins site={site} config={config} helper={helper} page={page} head={true} />
 
-            {adsenseClientId ? <script data-ad-client={adsenseClientId}
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script> : null}
             {hasLive2D ? <link rel="stylesheet" href={my_cdn(url_for('/live2d/waifu.css'))} /> : null}
             {hasLive2D ? <script type="text/javascript" async={true} src={my_cdn(url_for('/live2d/autoload.js'))}></script> : null}
             {isValineComment ? <script async="" referrerpolicy="no-referrer" src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script> : null}

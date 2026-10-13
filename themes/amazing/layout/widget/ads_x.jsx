@@ -1,41 +1,26 @@
 const {Component} = require('inferno');
 const {cacheComponent} = require('hexo-component-inferno/lib/util/cache');
+const AdUnit = require('./ad_unit');
 
 class AdSenseX extends Component {
     render() {
-        const {clientId, slotId} = this.props;
-        return <div class="card widget">
-            <div class="g-ads-x">
-                <div class="card-content">
-                    {/* <div class="menu">
-                            <h3 class="menu-label">
-                                温馨提示！此处可能会出现广告！
-                            </h3>
-                        </div>
-                        <br/> */}
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins class="adsbygoogle"
-                         style="display:block; text-align:center;"
-                         data-ad-layout="in-article"
-                         data-ad-format="fluid"
-                         data-ad-client={clientId}
-                         data-ad-slot={slotId}></ins>
-                    <script
-                        dangerouslySetInnerHTML={{__html: '(adsbygoogle = window.adsbygoogle || []).push({});'}}></script>
-                </div>
-            </div>
-        </div>
+        const {clientId, slotId, format, layout} = this.props;
+        return <AdUnit clientId={clientId} slotId={slotId} format={format} layout={layout} />;
     }
 }
 
 module.exports = cacheComponent(AdSenseX, 'widget.adsense_x', props => {
     const {config, display} = props;
-    const {adsense_client_id, adsense_slot_id} = config;
-    if (!adsense_client_id || !adsense_slot_id || !display) {
+    const {adsense_client_id, adsense_slot_id, adsense_display_slot_id} = config;
+    const slotId = adsense_display_slot_id || adsense_slot_id;
+    if (!adsense_client_id || !slotId || !display) {
         return null;
     }
     return {
         clientId: adsense_client_id,
-        slotId: adsense_slot_id
+        slotId,
+        // 展示广告与文章内广告保留各自格式，不能仅修改 format 复用不同类型的单元。
+        format: adsense_display_slot_id ? 'auto' : 'fluid',
+        layout: adsense_display_slot_id ? undefined : 'in-article'
     };
 });

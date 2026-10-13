@@ -59,7 +59,7 @@ module.exports = class extends Component {
         var pjaxJs = `var pjax = new Pjax({
             elements: "a",//代表点击链接就更新
             selectors: [  //代表要更新的节点
-                ".section",
+                "body > .section", // 只替换页面主区域，不匹配文章中的同名区块
                 "title"
             ],
             cache: true,
@@ -76,7 +76,7 @@ module.exports = class extends Component {
         
         // PJAX 完成之后执行的函数，可以和上面的重载放在一起
         document.addEventListener('pjax:complete', function () {
-            $(".section").css({opacity:1});
+            $("body > .section").css({opacity:1});
             if(${hasComment}){
                 try{
                     $.getScript('${my_cdn(url_for('/js/comment-issue-data.js'))}',function(){loadIssueData('${appId}','${appKey}','${userName}','${userRepo}',${isValine});});
