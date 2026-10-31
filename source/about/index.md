@@ -26,6 +26,17 @@ QQ交流群：749076211
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=hujinbin)](https://git.io/streak-stats)
 
 
+
+# 软著
+
+
+![img](http://cdn.leheavengame.com/copyright/hshop.jpgg)
+
+![img](http://cdn.leheavengame.com/copyright/ywhx.jpg)
+
+
+
+
 <br>
 
 #### 博客信息
