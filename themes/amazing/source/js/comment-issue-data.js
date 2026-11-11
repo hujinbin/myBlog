@@ -179,9 +179,9 @@ function renderCommentData(COMMENT_ARR) {
             var contentStr = item.content;
             htmlContentWidget +=
                 "<div class='card-comment-item'>" + 
-                    "<a href=\"" + item.userUrl + "\"target=\"_blank\">" + 
-                        "<img class='ava' src='" + item.userAvatar + "  onerror='this.onerror = null;this.src=\"https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg\";' '/>
-                    </a>" +
+                    "<a href=\"" + item.userUrl + "\" target=\"_blank\">" +
+                        "<img class='ava' src='" + item.userAvatar + "' onerror='this.onerror = null;this.src=\"https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg\";' />" +
+                    "</a>" +
                     "<div class='item-header-text'><a href='" + item.userUrl + "' target='_blank'>" + item.userName + "</a>&nbsp;发表于" + getDateDiff(new Date(item.date).getTime()) + "</div>" + "<div class=\"item-text\"><a href =\"" + item.url + '#comment-container\">' + contentStr + "</a></div>" +
                 "</div>";
         }
@@ -345,17 +345,8 @@ function loadIssueData(appId, appKey, userName, userRepo, isValine) {
 
 //load issue data completely execute
 function loadPjax() {
-    if (typeof Pjax === "function") {
-        var pjax = new Pjax({
-            elements: "a",//代表点击链接就更新
-            selectors: [  //代表要更新的节点
-                ".section",
-                "title"
-            ],
-            cache: true,
-            cacheBust: false
-        })
-        document.addEventListener('pjax:complete', function () {
-        });
+    if (window.pjax && typeof window.pjax.refresh === "function") {
+        // 为动态插入的链接绑定现有 PJAX 实例，避免重复监听浏览器历史事件。
+        window.pjax.refresh();
     }
 }

@@ -324,6 +324,9 @@ var noop = require("./util/noop");
 module.exports = function(request) {
   if (request && request.readyState < 4) {
     request.onreadystatechange = noop;
+    // 快速切页主动取消旧请求时，禁止旧请求触发整页跳转。
+    request.onerror = noop;
+    request.ontimeout = noop;
     request.abort();
   }
 };
@@ -790,10 +793,10 @@ module.exports = function(responseText, request, href, options) {
   options.request = request;
 
   // Fail if unable to load HTML via AJAX
-  if (responseText === false) {
+  if (typeof responseText !== "string") {
     trigger(document, "pjax:complete pjax:error", options);
-
-    return;
+    // 请求失败后恢复浏览器导航，避免点击被拦截后一直停留在原页面。
+    return this.latestChance(href);
   }
 
   // push scroll position to history

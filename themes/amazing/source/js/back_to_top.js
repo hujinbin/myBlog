@@ -141,10 +141,11 @@ function loadBackTop() {
     }
 
     update();
-    $(window).resize(update);
-    $(window).scroll(update);
+    // 每次切页替换旧监听，避免继续读取已移除的侧栏并累积滚动计算。
+    $(window).off('resize.blogBackTop scroll.blogBackTop')
+        .on('resize.blogBackTop scroll.blogBackTop', update);
 
-    $('#back-to-top').on('click', () => {
+    $('#back-to-top').off('click.blogBackTop').on('click.blogBackTop', () => {
         if (CSS && CSS.supports && CSS.supports('(scroll-behavior: smooth)')) {
             window.scroll({ top: 0, behavior: 'smooth' });
         } else {

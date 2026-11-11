@@ -16,7 +16,7 @@ WebAssembly 就可以出现在这里。对前端开发者来说，日常接触�
 这篇文章用 **JavaScript + Vite + Web Worker** 做一个本地图片转 WebP 的小工具。Wasm 编码器使用现成的 `@jsquash/webp`，整个案例只写前端代码。
 
 
-![浏览器图片转 WebP 案例：原图与结果预览、质量调节、体积和耗时信息](./wasm-webp-demo.png)
+![浏览器图片转 WebP 案例：原图与结果预览、质量调节、体积和耗时信息](/images/wasm-webp-demo.png)
 
 截图使用的是内置生成的 PNG 示例，显示的体积和耗时只对应这一次处理。
 
@@ -316,7 +316,7 @@ form.append('file', uploadFile);
 
 本文案例与阅读资料：
 
-- [完整案例源码及预构建文件](./wasm-webp-demo.zip)
+- [完整案例源码及预构建文件](/downloads/wasm-webp-demo.zip)
 - [jSquash 官方仓库](https://github.com/jamsinclair/jSquash)
 - [WebP 编码包说明](https://github.com/jamsinclair/jSquash/blob/main/packages/webp/README.md)
 - [MDN WebAssembly 文档](https://developer.mozilla.org/en-US/docs/WebAssembly)

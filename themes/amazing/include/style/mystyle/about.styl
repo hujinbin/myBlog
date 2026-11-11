@@ -1,0 +1,113 @@
+// 证书使用完整预览，避免长图撑满关于页或裁掉登记信息。
+.article .content .about-copyright {
+  margin: 2rem 0;
+
+  h2 {
+    margin: 0 0 1.25rem;
+    font-size: 1.5rem;
+  }
+
+  .copyright-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .copyright-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e5e9ef;
+    border-radius: 8px;
+    color: inherit;
+    background: #fff;
+    text-decoration: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+
+    &:hover, &:focus-visible {
+      border-color: #3273dc;
+      box-shadow: 0 4px 16px rgba(50, 115, 220, .1);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #3273dc;
+      outline-offset: 3px;
+    }
+  }
+
+  .copyright-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 340px;
+    padding: 20px;
+    background: #f5f7fa;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      object-fit: contain;
+    }
+  }
+
+  .copyright-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 18px;
+
+    h3 {
+      margin: 0;
+      color: inherit;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  .copyright-view {
+    flex-shrink: 0;
+    color: #3273dc;
+    font-size: .8rem;
+  }
+}
+
+.night .article .content .about-copyright {
+  .copyright-card {
+    background: #1d1b1b;
+    border-color: #3a3737;
+  }
+
+  .copyright-preview {
+    background: #252323;
+  }
+
+  .copyright-view {
+    color: #80adf2;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .article .content .about-copyright {
+    .copyright-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .copyright-preview {
+      height: 320px;
+      padding: 16px;
+    }
+
+    .copyright-caption {
+      padding: 14px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article .content .about-copyright .copyright-card {
+    transition: none;
+  }
+}

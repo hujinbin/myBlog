@@ -27,12 +27,29 @@ QQ交流群：749076211
 
 
 
-# 软著
-
-
-![img](http://cdn.leheavengame.com/copyright/hshop.jpgg)
-
-![img](http://cdn.leheavengame.com/copyright/ywhx.jpg)
+<section class="about-copyright" aria-labelledby="copyright-title">
+  <h2 id="copyright-title">软著</h2>
+  <div class="copyright-grid">
+    <a class="copyright-card gallery-item" href="https://cdn.leheavengame.com/copyright/hshop.jpg" target="_blank" rel="noopener" aria-label="查看惠shop平台软件著作权登记证书大图">
+      <div class="copyright-preview">
+        <img class="not-gallery-item" src="https://cdn.leheavengame.com/copyright/hshop.jpg" alt="惠shop平台 V1.0 软件著作权登记证书" width="1080" height="1440" loading="lazy" decoding="async">
+      </div>
+      <div class="copyright-caption">
+        <h3>惠shop平台</h3>
+        <span class="copyright-view">查看大图 <span aria-hidden="true">↗</span></span>
+      </div>
+    </a>
+    <a class="copyright-card gallery-item" href="https://cdn.leheavengame.com/copyright/ywhx.jpg" target="_blank" rel="noopener" aria-label="查看以武化仙网游软件著作权登记证书大图">
+      <div class="copyright-preview">
+        <img class="not-gallery-item" src="https://cdn.leheavengame.com/copyright/ywhx.jpg" alt="以武化仙网游软件 V1.0 软件著作权登记证书" width="958" height="1280" loading="lazy" decoding="async">
+      </div>
+      <div class="copyright-caption">
+        <h3>以武化仙网游软件</h3>
+        <span class="copyright-view">查看大图 <span aria-hidden="true">↗</span></span>
+      </div>
+    </a>
+  </div>
+</section>
 
 
 

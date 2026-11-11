@@ -60,10 +60,12 @@ module.exports = class extends Component {
             elements: "a",//代表点击链接就更新
             selectors: [  //代表要更新的节点
                 "body > .section", // 只替换页面主区域，不匹配文章中的同名区块
+                "body > .navbar-main .navbar-start", // 同步当前菜单高亮，保留搜索和主题切换按钮。
                 "title"
             ],
             cache: true,
-            cacheBust:false
+            cacheBust:false,
+            timeout: 8000
         })
 
         function loadBusuanzi(){

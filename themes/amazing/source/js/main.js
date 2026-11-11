@@ -43,7 +43,7 @@ function loadMainJs($, moment, ClipboardJS, config) {
     }
 
     adjustNavbar();
-    $(window).resize(adjustNavbar);
+    $(window).off('resize.blogNavbar').on('resize.blogNavbar', adjustNavbar);
 
     function toggleFold(codeBlock, isFolded) {
         const $toggle = $(codeBlock).find('.fold i');
@@ -56,13 +56,16 @@ function loadMainJs($, moment, ClipboardJS, config) {
         return '<span class="fold">' + (fold === 'unfolded' ? '<i class="fas fa-angle-down"></i>' : '<i class="fas fa-angle-right"></i>') + '</span>';
     }
 
-    $('figure.highlight table').wrap('<div class="highlight-body">');
+    // PJAX 重入时只初始化新代码块，避免重复包裹和绑定按钮。
+    const $codeBlocks = $('figure.highlight:not([data-highlight-ready])');
+    $codeBlocks.attr('data-highlight-ready', 'true');
+    $codeBlocks.find('table').wrap('<div class="highlight-body">');
     if (typeof config !== 'undefined'
         && typeof config.article !== 'undefined'
         && typeof config.article.highlight !== 'undefined') {
 
-        $('figure.highlight').addClass('hljs');
-        $('figure.highlight .code .line span').each(function () {
+        $codeBlocks.addClass('hljs');
+        $codeBlocks.find('.code .line span').each(function () {
             const classes = $(this).attr('class').split(/\s+/);
             if (classes.length === 1) {
                 $(this).addClass('hljs-' + classes[0]);
@@ -74,7 +77,7 @@ function loadMainJs($, moment, ClipboardJS, config) {
         const clipboard = config.article.highlight.clipboard;
         const fold = config.article.highlight.fold.trim();
 
-        $('figure.highlight').each(function () {
+        $codeBlocks.each(function () {
             if ($(this).find('figcaption').length) {
                 $(this).find('figcaption').addClass('level is-mobile');
                 $(this).find('figcaption').append('<div class="level-left">');
@@ -89,17 +92,20 @@ function loadMainJs($, moment, ClipboardJS, config) {
         });
 
         if (typeof ClipboardJS !== 'undefined' && clipboard) {
-            $('figure.highlight').each(function () {
+            $codeBlocks.each(function () {
                 const id = 'code-' + Date.now() + (Math.random() * 1000 | 0);
                 const button = '<a href="javascript:;" class="copy" title="Copy" data-clipboard-target="#' + id + ' .code"><i class="fas fa-copy"></i></a>';
                 $(this).attr('id', id);
                 $(this).find('figcaption div.level-right').append(button);
             });
-            new ClipboardJS('.highlight .copy'); // eslint-disable-line no-new
+            // 复制事件使用委托，只需创建一个实例即可覆盖后续 PJAX 插入的代码块。
+            if (!window.blogClipboard) {
+                window.blogClipboard = new ClipboardJS('.highlight .copy');
+            }
         }
 
         if (fold) {
-            $('figure.highlight').each(function () {
+            $codeBlocks.each(function () {
                 if ($(this).find('figcaption').find('span').length > 0) {
                     const span = $(this).find('figcaption').find('span');
                     if (span[0].innerText.indexOf('>folded') > -1) {
@@ -113,13 +119,15 @@ function loadMainJs($, moment, ClipboardJS, config) {
                 toggleFold(this, fold === 'folded');
             });
 
-            $('figure.highlight figcaption .fold').click(function () {
+            $codeBlocks.find('figcaption .fold').click(function () {
                 const $code = $(this).closest('figure.highlight');
                 toggleFold($code.eq(0), !$code.hasClass('folded'));
             });
         }
     }
 
+    $('#toc-mask').remove();
+    $('.navbar-main .catalogue').off('click.blogToc');
     const $toc = $('#toc');
     if ($toc.length > 0) {
         const $mask = $('<div>');
@@ -132,9 +140,9 @@ function loadMainJs($, moment, ClipboardJS, config) {
             $mask.toggleClass('is-active');
         }
 
-        $toc.on('click', toggleToc);
-        $mask.on('click', toggleToc);
-        $('.navbar-main .catalogue').on('click', toggleToc);
+        $toc.off('click.blogToc').on('click.blogToc', toggleToc);
+        $mask.on('click.blogToc', toggleToc);
+        $('.navbar-main .catalogue').on('click.blogToc', toggleToc);
     }
 }
 

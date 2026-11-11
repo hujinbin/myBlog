@@ -130,9 +130,15 @@ module.exports = class extends Component {
                 });
             ` }} /> : null}
             {adsenseClientId ? <script data-cfasync="false" defer src={url_for('/js/adsense.js?v=1')} /> : null}
-             {/* http协议和https协议无法跳转问题 */}
-            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-            {/* http协议和https协议无法跳转问题 */}
+            {/* 仅在线上 HTTPS 页面升级资源，避免本地 HTTP 路由重定向后误连 HTTPS。 */}
+            <script dangerouslySetInnerHTML={{ __html: `
+                if (window.location.protocol === 'https:') {
+                    var policy = document.createElement('meta');
+                    policy.httpEquiv = 'Content-Security-Policy';
+                    policy.content = 'upgrade-insecure-requests';
+                    document.head.appendChild(policy);
+                }
+            ` }} />
             {meta && meta.length ? <MetaTags meta={meta} /> : null}
 
             <title>{getPageTitle(page, config.title, helper)}</title>
@@ -184,7 +190,7 @@ module.exports = class extends Component {
             <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"/>
             <link rel="stylesheet" href={fontcdn('Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css')} />
             {globalGray ? <link rel="stylesheet" href={url_for('/css/global_gray.css')} /> : null}
-            <script src={cdn('jquery', '3.3.1', 'dist/jquery.min.js')}></script>
+            <script src={url_for('/js/vendor/jquery-3.3.1.min.js')}></script>
             <script src={my_cdn(url_for('/js/globalUtils.js'))}></script>
             <Plugins site={site} config={config} helper={helper} page={page} head={true} />
 

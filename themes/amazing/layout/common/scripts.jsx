@@ -4,7 +4,7 @@ const Plugins = require('./plugins');
 module.exports = class extends Component {
     render() {
         const { site, config, helper, page } = this.props;
-        const { url_for, cdn, my_cdn } = helper;
+        const { url_for, my_cdn } = helper;
         const { external_link, article, comment, has_banner } = config;
         const language = page.lang || page.language || config.language || 'en';
         const hasComment = comment != undefined && comment.type != undefined && (comment.type == 'gitalk' || comment.type == 'valine');
@@ -64,8 +64,8 @@ module.exports = class extends Component {
         };`;
 
         return <Fragment>
-            <script src={cdn('moment', '2.22.2', 'min/moment-with-locales.min.js')}></script>
-            {clipboard && <script src={cdn('clipboard', '2.0.4', 'dist/clipboard.min.js')} async></script>}
+            <script src={url_for('/js/vendor/moment-with-locales-2.22.2.min.js')}></script>
+            {clipboard && <script src={url_for('/js/vendor/clipboard-2.0.4.min.js')} defer></script>}
             <script dangerouslySetInnerHTML={{ __html: `moment.locale("${language}");` }}></script>
             <script dangerouslySetInnerHTML={{ __html: embeddedConfig }}></script>
             <script src={my_cdn(url_for('/js/column.js'))}></script>
