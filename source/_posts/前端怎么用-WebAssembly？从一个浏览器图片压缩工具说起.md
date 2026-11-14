@@ -1,6 +1,6 @@
 ---
 title: 前端怎么用 WebAssembly？从一个浏览器图片压缩工具说起
-date: 2026-11-08 21:19:36
+date: 2026-04-08 21:19:36
 tags: [WebAssembly, JavaScript, 前端开发, Web Worker, 图片处理]
 ---
 
