@@ -14,14 +14,17 @@ WeChat: hjb94110
 QQ交流群：749076211
 
 ##### 个人信息
-胡金斌/男/1994
-职位: 前端开发工程师
-地点: 杭州
-2015年6月份开始从事前端工作。
 
+- 胡金斌 / 男 / 1994
+- 职位：前端开发工程师 / 全栈开发工程师
+- 技能：前端开发、Python 开发、AI Agent 应用开发
+- 地点：杭州
 
-前端爱好者
+##### 开发经历
 
+- **2015 年 6 月起**，从事前端开发。
+- **2024 年起**，开始 Python 开发。
+- **2025 年起**，开始 AI Agent 应用开发。
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=hujinbin)](https://git.io/streak-stats)
 
