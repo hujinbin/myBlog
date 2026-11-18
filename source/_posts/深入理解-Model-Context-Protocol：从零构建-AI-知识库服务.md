@@ -5,8 +5,6 @@ tags: [AI, MCP, Server, Node.js]
 ---
 
 
-# 深入理解 Model Context Protocol：从零构建 AI 知识库服务
-
 > 本文通过一个真实的 MCP Server 项目，详细介绍 Model Context Protocol 的核心概念、架构设计和最佳实践。
 
 ## 引言：AI 交互的新范式
@@ -969,8 +967,6 @@ Model Context Protocol 为 AI 应用提供了一个优雅的扩展能力框架�
 ## 参考资源
 
 *   [MCP 官方文档](https://modelcontextprotocol.io)
-*   [MCP SDK](https://github.com/modelcontextprotocol/sdk)
-*   [本项目源码](https://github.com/your-username/mcp-server-jue-article)
 
 ***
 

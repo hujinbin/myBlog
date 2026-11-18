@@ -57,7 +57,7 @@ axios({
 #### 讲解原理：
 在配置中： target: ‘[http://www.leheavengame.com](http://www.leheavengame.com/)‘
 在上方vue-resource示例中 第一个参数为： /api/user/login
-就会被本地服务器自动解析为 http://www.leheavengame.com/main/login 而这个正式我们需要的地址。
+就会被本地服务器自动解析为 `http://www.leheavengame.com/main/login` 而这个正式我们需要的地址。
 跨域原理（本地文件假装在远程服务器上）：
 
 通过浏览器打开页面，当发起请求时：本地服务器的地址（通常是localhost:8080或者127.0.0.1:8080）会收到这个请求，接下来发现这个请求地址中含有字符串 /api，那么本地服务器会将请求地址变为 [http://www.leheavengame.com](http://www.leheavengame.com/) （配置地址） + main/login（调用方法处的详细地址）。

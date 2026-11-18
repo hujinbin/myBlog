@@ -6,8 +6,6 @@ tags: javascript
 
 
 
-升级webpack 5实战
-
 ## 一、背景
 
 本次对公司项目进行webpack的升级 ， 原有版本是webpack4.42.1， 本次升级目标是webpack5.28.0，已经是很新的版本了。目标，升级Webpack5，应用长效缓存，提升构建速度。

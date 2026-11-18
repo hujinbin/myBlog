@@ -4,8 +4,6 @@ date: 2025-03-22 21:48:35
 tags: ["Web开发", "前端技术", "实时通信", "WebSocket", "SSE", "HTTP"]
 ---
 
-# Web 实时通信技术对比：HTTP vs SSE vs WebSocket
-
 ## 引言
 
 在现代 Web 应用开发中，客户端与服务器之间的实时通信变得越来越重要。从简单的数据获取到实时聊天、股票行情推送、协作编辑等场景，我们需要根据具体需求选择合适的通信方式。本文将深入探讨三种主流的 Web 通信技术：HTTP、Server-Sent Events (SSE) 和 WebSocket，帮助你在实际项目中做出最佳选择。

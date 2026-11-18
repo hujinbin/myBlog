@@ -4,8 +4,6 @@ date: 2026-03-08 23:14:00
 tags: [AI, Prompt Engineering, AI Tools]
 ---
 
-# AI 时代必备技能指南：从 Prompt 新手到 AI 专家的进阶路线
-
 > 在 AI 重塑工作的时代，掌握这些技能让你从"被替代"变成"不可替代"
 
 ## 引言：AI 技能的新时代
@@ -980,7 +978,7 @@ class AIDataAnalyst:
 只输出代码，不要解释：
 ```python
 # your code here
-````
+```
 
 """
 }]

@@ -5,7 +5,6 @@ tags: javascript
 ---
 
 
-### 什么是ES6？
 ECMAScript 6（以下简称ES6）是JavaScript语言的下一代标准，已经在2015年6月正式发布了。Mozilla公司将在这个标准的基础上，推出JavaScript 2.0。
 
 ECMAScript和JavaScript到底是什么关系？很多初学者会感到困惑，简单来说，ECMAScript是JavaScript语言的国际标准，JavaScript是ECMAScript的实现。

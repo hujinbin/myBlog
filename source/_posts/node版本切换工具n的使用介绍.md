@@ -5,8 +5,6 @@ tags: [javascript,node]
 ---
 
 
-### node版本切换工具n的使用介绍
-
 #### n
 交互式管理 Node.js 版本
 

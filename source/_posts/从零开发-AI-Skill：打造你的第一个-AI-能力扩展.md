@@ -5,8 +5,6 @@ tags: [AI Skill, OpenAI Functions, MCP, LangChain, 技能开发]
 ---
 
 
-# 从零开发 AI Skill：打造你的第一个 AI 能力扩展
-
 > 手把手教你为 AI 系统开发自定义技能，让 AI 助手更懂你的业务
 
 ## 引言：AI Skill 是什么？
@@ -1830,7 +1828,6 @@ const excellentSkill = {
 **开源项目**
 
 *   [mcp-server-examples](https://github.com/modelcontextprotocol/servers) - MCP Server 示例
-*   [langchain-tools](https://github.com/langchain-ai/langchain/tree/master/libs/langchain/langchain/tools) - LangChain 工具集
 *   [openai-function-calling-examples](https://github.com/openai/openai-cookbook/tree/main/examples) - OpenAI 示例
 
 ### 社区
